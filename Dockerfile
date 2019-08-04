@@ -13,5 +13,5 @@ RUN npm install
 COPY --chown=node:node . .
 
 EXPOSE 8080
-
+RUN ["chmod", "+x", "/usr/src/app/docker-entrypoint.sh"]
 CMD [ "node", "app.js" ]
